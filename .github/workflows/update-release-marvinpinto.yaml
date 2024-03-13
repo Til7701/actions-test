@@ -20,6 +20,7 @@ jobs:
           title: "Development Build"
           files: |
             example-artifact1.txt
+            example-artifact2.txt
 
   test-release2:
     name: Test release 2
