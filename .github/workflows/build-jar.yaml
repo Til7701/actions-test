@@ -22,12 +22,6 @@ jobs:
     runs-on: ${{ inputs.os }}
     steps:
       - uses: actions/checkout@v4
-      - name: Set up JDK
-        uses: actions/setup-java@v4.1.0
-        with:
-          java-version: '21'
-          distribution: 'temurin'
-          cache: maven
       - name: Build with Maven
         run: |
           #${{ inputs.mvn }} --batch-mode --update-snapshots clean install package
