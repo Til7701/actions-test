@@ -15,6 +15,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: "marvin"
           prerelease: true
+          target_commitish: ${{ github.sha }}
           files: |
             example-artifact1.txt
 
@@ -28,5 +29,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: "marvin"
           prerelease: true
+          target_commitish: ${{ github.sha }}
           files: |
             example-artifact2.txt
