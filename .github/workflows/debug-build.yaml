@@ -15,6 +15,7 @@ jobs:
     secrets: inherit
 
   release:
+    needs: build
     uses: ./.github/workflows/release.yaml
     with:
       tag: debug
