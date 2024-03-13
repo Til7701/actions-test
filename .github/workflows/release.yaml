@@ -34,6 +34,9 @@ jobs:
         with:
           name: server-jar-win
 
+      - name: List artifacts
+        run: ls -al
+
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}

@@ -27,8 +27,10 @@ jobs:
           #${{ inputs.mvn }} --batch-mode --update-snapshots clean install package
           mkdir -p client/target
           touch client/target/client-${{ inputs.version }}.jar
+          echo "Hello" > client/target/client-${{ inputs.version }}.jar
           mkdir -p server/target
           touch server/target/server-${{ inputs.version }}.jar
+          echo "Hello" > server/target/server-${{ inputs.version }}.jar
           mv client/target/client-${{ inputs.version }}.jar client/target/kurtama-client-${{ inputs.version }}-${{ inputs.jar-file-modifier }}.jar
           mv server/target/server-${{ inputs.version }}.jar server/target/kurtama-server-${{ inputs.version }}-${{ inputs.jar-file-modifier }}.jar
 
