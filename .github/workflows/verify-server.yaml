@@ -1,0 +1,17 @@
+name: verify server changes
+
+on:
+  push:
+    paths:
+      #- '!client'
+      - 'server'
+      - 'common'
+      - 'pom.xml'
+      - '.github/workflows/verify-server.yaml'
+
+jobs:
+  verify-server:
+    name: verify server
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4

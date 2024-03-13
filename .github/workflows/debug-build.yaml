@@ -1,0 +1,26 @@
+name: debug-build all targets
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/dev-build.yaml'
+      - '.github/workflows/build.yaml'
+      - '.github/workflows/build-jar.yaml'
+      - '.github/workflows/build-jpackage.yaml'
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yaml
+    with:
+      tag: debug
+      github-release: true
+      prerelease: true
+    secrets: inherit
+
+  release:
+    uses: ./.github/workflows/release.yaml
+    with:
+      tag: debug
+      prerelease: true
+    secrets: inherit

@@ -1,0 +1,14 @@
+name: Verify Project
+
+on:
+  push:
+    paths:
+      - '.github/workflows/verify.yaml'
+  workflow_call:
+
+jobs:
+  verify:
+    name: verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4

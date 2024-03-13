@@ -1,0 +1,32 @@
+name: Release artifacts
+
+on:
+  workflow_call:
+    inputs:
+      tag:
+        required: true
+        type: string
+      prerelease:
+        required: true
+        type: boolean
+
+jobs:
+  release:
+    name: Release artifacts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: client-deb
+      - uses: actions/download-artifact@v4
+        with:
+          name: client-exe
+
+      - uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: ${{ inputs.tag }}
+          prerelease: ${{ inputs.prerelease }}
+          title: ${{ inputs.tag }}
+          files: |
+            ./*
