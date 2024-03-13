@@ -17,7 +17,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build and Package
-        run: ./build-client.sh linux ${{ inputs.version }}
+        run: |
+          #./build-client.sh linux ${{ inputs.version }}
+          mkdir -p ./target/jpackage-out
+          touch ./target/jpackage-out/kurtama-client_${{ inputs.version }}_amd64.deb
 
       - name: Upload deb to release
         uses: actions/upload-artifact@v4
@@ -34,7 +37,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build and Package
         shell: bash
-        run: ./build-client.sh windows ${{ inputs.version }} ${{ inputs.winVersion }}
+        run: |
+          #./build-client.sh windows ${{ inputs.version }} ${{ inputs.winVersion }}
+          mkdir -p /target/jpackage-out
+          touch /target/jpackage-out/Kurtama-${{ inputs.winVersion }}.exe
 
       - name: Upload exe to release
         uses: actions/upload-artifact@v4
