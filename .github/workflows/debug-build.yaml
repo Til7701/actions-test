@@ -12,10 +12,6 @@ on:
 jobs:
   build:
     uses: ./.github/workflows/build.yaml
-    with:
-      tag: debug
-      github-release: true
-      prerelease: true
     secrets: inherit
 
   release:

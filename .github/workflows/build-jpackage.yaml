@@ -3,9 +3,6 @@ name: Build with JPackage
 on:
   workflow_call:
     inputs:
-      tag:
-        required: true
-        type: string
       version:
         required: true
         type: string
