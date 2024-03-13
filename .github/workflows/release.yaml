@@ -21,6 +21,18 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: client-exe
+      - uses: actions/download-artifact@v4
+        with:
+          name: client-jar-linux
+      - uses: actions/download-artifact@v4
+        with:
+          name: client-jar-win
+      - uses: actions/download-artifact@v4
+        with:
+          name: server-jar-linux
+      - uses: actions/download-artifact@v4
+        with:
+          name: server-jar-win
 
       - uses: marvinpinto/action-automatic-releases@latest
         with:
