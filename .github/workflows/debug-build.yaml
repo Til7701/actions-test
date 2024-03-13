@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
+      - '.github/workflows/debug-build.yaml'
       - '.github/workflows/dev-build.yaml'
       - '.github/workflows/build.yaml'
       - '.github/workflows/build-jar.yaml'
