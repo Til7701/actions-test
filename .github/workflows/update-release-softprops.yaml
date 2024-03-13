@@ -3,6 +3,8 @@ name: Testing multiple release actions with different artifacts
 on:
   workflow_dispatch:
   push:
+    paths:
+      - '.github/workflows/update-release-softprops.yaml'
 
 jobs:
   test-release1:
