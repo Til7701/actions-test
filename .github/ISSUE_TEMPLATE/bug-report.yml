@@ -12,7 +12,7 @@ body:
     attributes:
       label: What happened?
       description: Describe the bug.
-      placeholder: Description
+      placeholder: I can not start the game.
     validations:
       required: true
   - type: textarea
@@ -28,7 +28,7 @@ body:
     attributes:
       label: Expected behaviour
       description: Describe the expected behaviour after the steps above.
-      placeholder: Expected behaviour
+      placeholder: The game starts.
     validations:
       required: true
   - type: textarea
@@ -36,7 +36,7 @@ body:
     attributes:
       label: Actual behaviour
       description: Describe the actual behaviour after the steps above.
-      placeholder: Actual behaviour
+      placeholder: The game is crashing.
     validations:
       required: true
   - type: textarea
@@ -47,20 +47,17 @@ body:
       placeholder: Further Information
     validations:
       required: false
-  - type: dropdown
+  - type: input
     id: version
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 0.0.1-SNAPSHOT
-      default: 0
+      label: Which version of our software are you running?
+      placeholder: X.X.X or X.X.X-xxxxx-XXXXXXXXXXXXXX
     validations:
       required: true
   - type: dropdown
     id: os
     attributes:
-      label: What OS are you using
+      label: Which OS are you using?
       multiple: false
       options:
         - Ubuntu
