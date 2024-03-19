@@ -67,17 +67,17 @@ body:
         - MacOS
       default: 0
   - type: dropdown
-  id: download
-  attributes:
-    label: How did you download the software?
-    options:
+    id: download
+    attributes:
+      label: How did you download the software?
+      options:
         - from GitHub release
         - apt
         - nix
         - built from source
-    default: 0
-  validations:
-    required: true
+      default: 0
+    validations:
+      required: true
   - type: textarea
     id: logs
     attributes:
