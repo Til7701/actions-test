@@ -51,7 +51,7 @@ body:
     id: version
     attributes:
       label: Which version of our software are you running?
-      placeholder: X.X.X or X.X.X-xxxxx-XXXXXXXXXXXXXX
+      placeholder: e.g. X.X.X or X.X.X-xxxxx-XXXXXXXXXXXXXX
     validations:
       required: true
   - type: dropdown
@@ -66,6 +66,18 @@ body:
         - Windows
         - MacOS
       default: 0
+  - type: dropdown
+  id: download
+  attributes:
+    label: How did you download the software?
+    options:
+      - from GitHub release
+      - apt
+      - nix
+      - built from source
+    default: 0
+  validations:
+    required: true
   - type: textarea
     id: logs
     attributes:
