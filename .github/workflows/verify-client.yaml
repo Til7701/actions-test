@@ -14,4 +14,4 @@ jobs:
     name: verify client
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.0.0
+      - uses: actions/checkout@v5.0.0
