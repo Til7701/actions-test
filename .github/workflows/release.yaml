@@ -15,22 +15,22 @@ jobs:
     name: Release artifacts
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: client-deb
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: client-exe
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: client-jar-linux
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: client-jar-win
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: server-jar-linux
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: server-jar-win
 
