@@ -11,7 +11,7 @@ jobs:
     name: Test release 1
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6.0.1
       - uses: softprops/action-gh-release@v2.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -25,7 +25,7 @@ jobs:
     name: Test release 2
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6.0.1
       - uses: softprops/action-gh-release@v2.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

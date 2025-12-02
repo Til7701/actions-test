@@ -15,7 +15,7 @@ jobs:
     name: Build on Ubuntu
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.0.0
+      - uses: actions/checkout@v6.0.1
       - name: Build and Package
         run: |
           #./build-client.sh linux ${{ inputs.version }}
@@ -36,7 +36,7 @@ jobs:
     name: Build on Windows
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4.0.0
+      - uses: actions/checkout@v6.0.1
       - name: Build and Package
         shell: bash
         run: |
