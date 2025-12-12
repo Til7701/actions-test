@@ -24,7 +24,7 @@ jobs:
           echo "Hello" > ./target/jpackage-out/kurtama-client_${{ inputs.version }}_amd64.deb
 
       - name: Upload deb to release
-        uses: actions/upload-artifact@v4.0.0
+        uses: actions/upload-artifact@v6.0.0
         with:
           name: client-deb
           path: ./target/jpackage-out/kurtama-client_${{ inputs.version }}_amd64.deb
@@ -47,7 +47,7 @@ jobs:
           mv ./target/jpackage-out/Kurtama-${{ inputs.winVersion }}.exe ./target/jpackage-out/Kurtama-${{ inputs.winVersion }}-setup.exe
 
       - name: Upload exe to release
-        uses: actions/upload-artifact@v4.0.0
+        uses: actions/upload-artifact@v6.0.0
         with:
           name: client-exe
           path: ./target/jpackage-out/Kurtama-${{ inputs.winVersion }}-setup.exe

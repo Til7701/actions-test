@@ -35,7 +35,7 @@ jobs:
           mv server/target/server-${{ inputs.version }}.jar server/target/kurtama-server-${{ inputs.version }}-${{ inputs.jar-file-modifier }}.jar
 
       - name: Upload client jar
-        uses: actions/upload-artifact@v4.0.0
+        uses: actions/upload-artifact@v6.0.0
         with:
           name: client-jar-${{ inputs.jar-file-modifier }}
           path: client/target/kurtama-client-${{ inputs.version }}-${{ inputs.jar-file-modifier }}.jar
@@ -43,7 +43,7 @@ jobs:
           overwrite: true
           if-no-files-found: error
       - name: Upload server jar
-        uses: actions/upload-artifact@v4.0.0
+        uses: actions/upload-artifact@v6.0.0
         with:
           name: server-jar-${{ inputs.jar-file-modifier }}
           path: server/target/kurtama-server-${{ inputs.version }}-${{ inputs.jar-file-modifier }}.jar
